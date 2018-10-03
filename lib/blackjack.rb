@@ -3,7 +3,7 @@ def welcome
 end
 
 def deal_card(number)
-card = rand(1..11)
+ card = rand(1..11)
 end
 
 def display_card_total(card_total)
@@ -29,18 +29,14 @@ def initial_round(string = number1 + number2)
   "Your cards add up to #{card_total}".
 end
 
-def hit?(card_total)
-  puts "Type 'h' to hit or 's' to stay".
-  user_input = gets.chomp
-  if player input is 's'
-    "do not deal_card"
-  elsif player input is 'h'
-    "deal_card"
-  else
-
-  end
+def hit? (card_total)
   prompt_user
+  if get_user_input == 'h'
+    card_total += deal_card
+  end
+    card_total
 end
+
 
 def invalid_command
  puts "Please enter a valid command"
