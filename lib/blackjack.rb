@@ -7,7 +7,7 @@ def deal_card(number)
 end
 
 def display_card_total(card_total)
-  puts "Your cards add up to #{card_total}"
+  puts "Your cards add up to #{card_total}".
 end
 
 def prompt_user
@@ -33,8 +33,11 @@ def hit? (card_total)
   prompt_user
   if get_user_input == 'h'
     card_total += deal_card
-  end
+  elsif user_input == "s"
     card_total
+  else
+    invalid_command
+  end
 end
 
 
